@@ -360,20 +360,19 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[16] =
+static const flex_int16_t yy_accept[11] =
     {   0,
-        0,    0,    3,    2,    2,    1,    1,    1,    1,    0,
-        0,    1,    1,    1,    0
+        0,    0,    3,    2,    2,    0,    0,    0,    1,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    3,    1,    1,    1,    1,    4,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    2,    1,    2,    3,    1,    4,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -398,35 +397,33 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[6] =
+static const YY_CHAR yy_meta[5] =
     {   0,
-        1,    1,    2,    3,    3
+        1,    2,    3,    1
     } ;
 
-static const flex_int16_t yy_base[20] =
+static const flex_int16_t yy_base[14] =
     {   0,
-        0,    0,   15,   16,    2,    0,   11,    0,   10,    0,
-        0,    0,    0,    0,   16,   10,    6,    8,    7
+        8,    7,   10,   13,    0,    6,    5,    3,    0,   13,
+        0,    2,    3
     } ;
 
-static const flex_int16_t yy_def[20] =
+static const flex_int16_t yy_def[14] =
     {   0,
-       15,    1,   15,   15,   15,   16,   17,   16,   17,   18,
-       19,    9,   18,   19,    0,   15,   15,   15,   15
+       11,   11,   10,   10,   12,   13,   13,    7,    7,    0,
+       10,   10,   10
     } ;
 
-static const flex_int16_t yy_nxt[22] =
+static const flex_int16_t yy_nxt[18] =
     {   0,
-        4,    5,    4,    6,    7,    8,    9,   12,   12,   14,
-       13,   10,   11,   11,   15,    3,   15,   15,   15,   15,
-       15
+        4,    4,    4,    7,    6,    7,    9,    8,    8,   10,
+        5,    5,    3,   10,   10,   10,   10
     } ;
 
-static const flex_int16_t yy_chk[22] =
+static const flex_int16_t yy_chk[18] =
     {   0,
-        1,    1,    1,    1,    1,    5,    5,   17,   17,   19,
-       18,   16,    9,    7,    3,   15,   15,   15,   15,   15,
-       15
+       11,   11,   11,   13,   12,   13,    8,    7,    6,    3,
+        2,    1,   10,   10,   10,   10,   10
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -443,11 +440,11 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "floatNumber.l"
-#line 2 "floatNumber.l"
+#line 1 "commentsParser.l"
+#line 2 "commentsParser.l"
 #include <stdio.h>
-#line 450 "lex.yy.c"
-#line 451 "lex.yy.c"
+#line 447 "lex.yy.c"
+#line 448 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -664,9 +661,9 @@ YY_DECL
 		}
 
 	{
-#line 5 "floatNumber.l"
+#line 5 "commentsParser.l"
 
-#line 670 "lex.yy.c"
+#line 667 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -693,13 +690,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 16 )
+				if ( yy_current_state >= 11 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 16 );
+		while ( yy_base[yy_current_state] != 13 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -725,15 +722,15 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "floatNumber.l"
-printf("FLOAT");
+#line 6 "commentsParser.l"
+printf("COMMENT");
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 8 "floatNumber.l"
+#line 7 "commentsParser.l"
 ECHO;
 	YY_BREAK
-#line 737 "lex.yy.c"
+#line 734 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1030,7 +1027,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 16 )
+			if ( yy_current_state >= 11 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1058,11 +1055,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 16 )
+		if ( yy_current_state >= 11 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 15);
+	yy_is_jam = (yy_current_state == 10);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1738,5 +1735,5 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 8 "floatNumber.l"
+#line 7 "commentsParser.l"
 
